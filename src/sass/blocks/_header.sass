@@ -1,0 +1,226 @@
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 13px 0
+    &-logo
+        display: flex
+        align-items: center
+    &-menu 
+        margin-left: -25% 
+    &__contacts 
+        z-index: 1 
+.contacts
+    &__phone
+        text-align: end
+        &-tel
+            +bold
+            font-size: 24px
+            color: $white-color
+            text-decoration: none
+            cursor: pointer
+            & svg 
+                margin-right: 3px
+    &__whatsapp 
+        display: flex
+        justify-content: flex-end
+        &-btn 
+            display: flex
+            align-items: center 
+            z-index: 1 
+            padding: 8px
+            border: 1px solid $second-color
+            border-radius: 3px
+            +med
+            font-size: 12px
+            text-decoration: none
+            text-transform: uppercase
+            letter-spacing: 1px
+            color: $second-color
+            transition: all .3s 
+            & svg 
+                margin-right: 6px
+            &:hover 
+                border: 1px solid $white-color
+                color: $white-color 
+                transition: all .3s 
+    &__icon
+        display: none
+
+// Мобильное меню-бургер 
+body.no-scroll 
+  overflow: hidden
+// Навигация
+.nav
+  z-index: 105
+  transition: all 0.5s ease-in-out
+  &--active .nav 
+    opacity: 1
+    background: $text-color 
+  // иконка навигации
+  &__trigger 
+    display: none
+  &__button 
+    display: none
+  &__list 
+    margin: 0
+    display: flex
+    flex-direction: row
+    list-style: none
+  &__item 
+    margin-right: 50px
+    list-style-type: none
+    &:last-child
+        margin-right: 0
+  &__link 
+    position: relative
+    +med
+    font-size: 15px
+    text-transform: uppercase
+    text-decoration: none
+    color: $second-color
+    transition: all 0.6s
+    &:before 
+        content: ""
+        width: 0
+        height: 1px
+        position: absolute
+        bottom: -1px
+        right: 0
+        background: $second-color
+        transition: all 0.3s
+    &:hover 
+        &:before 
+            width: 100%
+            left: 0
+            background: $second-color
+
+@media (max-width: 1200px)
+    .header
+        &-logo
+            &__image 
+                height: 36px
+                padding-right: 14px
+            &__img 
+                height: 36px
+            &__text 
+                font-size: 21px
+        &-menu 
+            margin-left: -30%
+    .nav 
+        &__item 
+            margin-right: 25px 
+        &__link 
+            font-size: 13px 
+@media (max-width: 1024px)
+    .header
+        padding: 40px 0 20px 0
+        flex-direction: column
+        align-items: flex-start
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        &__contacts
+            display: flex
+            justify-content: space-between
+            align-items: center
+    .contacts
+        &__phone
+            text-align: start
+            &-tel
+                display: none 
+        &__whatsapp 
+            &-btn 
+                &:hover 
+                    border: 1px solid $main-color
+                    color: $main-color 
+        &__icon
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 34px
+            height: 34px
+            & svg 
+                fill: $main-color
+    .nav
+        position: fixed
+        top: 0
+        left: 0
+        margin-left: 0
+        transform: translateX(-100%)
+        width: 100%
+        height: 100%
+        z-index: 105
+        opacity: 0 
+        &__button
+            display: flex
+        &__trigger 
+            position: absolute
+            top: 40px
+            right: 0
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 34px
+            height: 34px
+            transition: ease 0.3s
+            z-index: 100
+            &--active 
+                transition: ease 0.3s
+                z-index: 110
+        &__item 
+            text-align: left
+            padding: 8px 
+            padding-bottom: 16px
+        &__list 
+            margin: 0
+            padding: 11%
+            padding-top: 40px
+            flex-direction: column
+            align-items: flex-start 
+        &__link 
+            color: $second-color
+            opacity: 0  
+        &__icon 
+            display: flex 
+            justify-content: center
+            position: relative
+            width: 18px
+            height: 2px
+            border-radius: 2px
+            position: absolute
+            top: 16px
+            background-color: $main-color
+            transition-property: background-color, transform
+            transition-duration: 0.5s 
+        &__icon:before, &__icon:after
+            content: ''
+            display: block
+            width: 18px
+            height: 2px
+            border-radius: 2px
+            position: absolute
+            background: $main-color
+            transition-property: margin, transform
+            transition-duration: 0.5s 
+        &__icon:before 
+            margin-top: -5px 
+        &__icon:after 
+            margin-top: 5px 
+        &--active &__link 
+            opacity: 1 
+        &--active .nav 
+            background-color: $white-color
+            transition: all 300ms ease-in-out
+            transform: translateX(0) 
+        &--active &__icon
+            background: rgba($white-color, 0) 
+            transition: all 300ms ease-in-out
+            transform: translateX(0) 
+        &--active &__icon:before 
+            margin-top: 0
+            transform: rotate(45deg) 
+        &--active &__icon:after 
+            margin-top: 0
+            transform: rotate(-45deg)

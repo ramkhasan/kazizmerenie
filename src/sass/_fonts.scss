@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'MADE Evolve Sans Thin';
+  src: url('../fonts/MADEEvolveSans/MADEEvolveSans-Thin.eot');
+  src: url('../fonts/MADEEvolveSans/MADEEvolveSans-Thin.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Thin.woff2') format('woff2'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Thin.woff') format('woff'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: auto;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Evolve Sans Light';
+  src: url('../fonts/MADEEvolveSans/MADEEvolveSans-Light.eot');
+  src: url('../fonts/MADEEvolveSans/MADEEvolveSans-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Light.woff2') format('woff2'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Light.woff') format('woff'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Evolve Sans Regular';
+  src: url('../fonts/MADEEvolveSans/MADEEvolveSans.eot');
+  src: url('../fonts/MADEEvolveSans/MADEEvolveSans.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans.woff2') format('woff2'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans.woff') format('woff'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Evolve Sans Medium';
+  src: url('../fonts/MADEEvolveSans/MADEEvolveSans-Medium.eot');
+  src: url('../fonts/MADEEvolveSans/MADEEvolveSans-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Medium.woff2') format('woff2'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Medium.woff') format('woff'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MADE Evolve Sans Bold';
+  src: url('../fonts/MADEEvolveSans/MADEEvolveSans-Bold.eot');
+  src: url('../fonts/MADEEvolveSans/MADEEvolveSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Bold.woff2') format('woff2'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Bold.woff') format('woff'),
+  url('../fonts/MADEEvolveSans/MADEEvolveSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: auto;
+  font-display: swap;
+}
+
+@mixin thin {
+  font-family: 'MADE Evolve Sans Thin', sans-serif;
+}
+@mixin light {
+  font-family: 'MADE Evolve Sans Light', sans-serif;
+}
+@mixin reg {
+  font-family: 'MADE Evolve Sans Regular', sans-serif;
+}
+@mixin med {
+  font-family: 'MADE Evolve Sans Medium', sans-serif;
+}
+@mixin bold {
+  font-family: 'MADE Evolve Sans Bold', sans-serif;
+}

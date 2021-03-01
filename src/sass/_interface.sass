@@ -1,0 +1,143 @@
+*
+  box-sizing: border-box    
+body
+  position: relative
+  color: $text-color
+  height: 100%
+  background: $white-color
+  font-family: 'MADE Evolve Sans Thin', sans-serif
+  font-size: 16px
+  line-height: 1.25
+// img
+//   max-width: 100%
+main 
+  position: relative
+  overflow: hidden
+.section
+  padding: 50px 0 
+  &-title 
+    margin: auto
+    padding-bottom: 67px 
+    font-size: 44px
+    text-align: center 
+    line-height: 1.2 
+    & span 
+      font-family: 'MADE Evolve Sans Bold', sans-serif 
+.container
+  position: relative
+  width: 1160px
+  margin: auto
+.button 
+  display: flex
+  flex-flow: row nowrap
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 25px 77px
+  border-radius: 200px
+  position: relative
+  color: $white-color
+  font-family: 'MADE Evolve Sans Regular', sans-serif
+  font-size: 16px
+  text-align: center
+  text-decoration: none
+  line-height: 1.4
+  letter-spacing: 1px
+  cursor: pointer
+  border: 1px solid $border-color
+  background-image: linear-gradient(to bottom, $gradient1-color 0%, $gradient2-color 100%)
+  box-shadow: $shadow-color 0px 5px 0px -1px, 0px 36px 30px -30px $shadow-color
+  transition: ease 0.3s
+  outline: none
+  z-index: 1
+  &:hover 
+    transform: scale(1.02)
+  &:active 
+    transform: scale(.98)
+  & span 
+    &:first-of-type 
+      font-family: 'MADE Evolve Sans Medium', sans-serif
+      font-size: 18px
+      text-transform: uppercase
+ 
+/* Стилизация полей формы */
+input
+  caret-color: $second-color
+  &:focus
+    border: 1px solid $second-color
+  &::placeholder
+    opacity: 0.5
+input 
+  -webkit-appearance: none
+input.error
+  border: 1px solid red
+#name-error, #phone-error, #email-error, #password-error, #last_name-error, #password_conf-error, #code-error
+  display: block
+  font-size: 12px
+  color: red
+
+/*  SCROLL TOP BUTTON */
+.scrollTop 
+  display: flex
+  pointer-events: none
+  width: 50px
+  height: 50px
+  background-color: $main-color 
+  border-radius: 50%
+  position: fixed
+  opacity: 0.8
+  right: 15px
+  bottom: 15px
+  transition: transform 0.3s ease, opacity 0.3s ease
+  transform: translateY(10px)
+  opacity: 0
+  z-index: 100
+  &.active 
+    pointer-events: auto
+    transform: translateY(0)
+    opacity: 1
+  & svg 
+    display: block
+    margin: auto
+    width: 50%
+    transform: translateY(-1px)
+  &:hover
+    opacity: 1
+/*  END SCROLL TOP BUTTON */
+
+@media (max-width: 1200px) 
+  .section 
+    &-title 
+      font-size: 34px 
+  .container
+    max-width: 960px
+    width: 95% 
+  .button 
+    padding: 23px 70px 
+    & span 
+      &:first-of-type 
+        font-size: 16px
+@media (max-width: 1024px)
+  .container
+    max-width: 760px
+    width: 90%
+@media (max-width: 768px)
+  .container
+    max-width: 580px
+    width: 90%
+@media (max-width: 425px)
+  .button
+    font-size: 14px
+    padding: 20px 70px 
+    & span:first-of-type
+      font-size: 14px 
+  .section
+    &-title
+      font-size: 26px 
+@media (max-width: 374px) 
+  .button 
+    padding: 20px 46px
+@media (max-width: 320px)
+  .container
+    max-width: 750px
+    width: 90%

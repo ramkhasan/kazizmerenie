@@ -1,0 +1,386 @@
+.hero
+    position: relative 
+    background: url(../img/hero/hero-bg-1920.jpg) center center no-repeat 
+    background-size: cover
+    overflow: hidden
+    &-block 
+        position: relative 
+        display: flex
+    &-text
+        width: 71%
+        &__title
+            max-width: 640px
+            margin: 0
+            margin-bottom: 32px
+            font-size: 51px
+            & span
+                +reg
+        &__subtitle
+            display: block
+            max-width: 560px
+            margin-bottom: 60px
+            +reg
+            font-size: 30px
+            & span
+                +light
+    &__button
+        overflow: hidden
+        &-block 
+            position: relative
+            display: flex
+            align-items: center
+            margin-bottom: 68px
+        &-price 
+            position: absolute
+            top: -11%
+            left: 40%
+            z-index: 2
+            width: 163px
+            height: 141px
+            background: url(../img/hero/price.png) no-repeat
+        &-offer 
+            position: relative
+            z-index: 0
+            max-width: 160px
+            margin-left: 53px
+            +reg 
+            font-size: 18px 
+            text-align: center
+            color: $white-color
+            & span 
+                position: absolute
+                left: -43px
+                bottom: -23px
+                +thin 
+                font-size: 116px
+                color: $white-color 
+                opacity: 0.4
+        &:after
+            content: ""
+            display: block
+            width: 20px
+            height: 300px
+            margin-left: 60px
+            background: linear-gradient(90deg,hsla(0,0%,100%,.1) 10%,hsla(0,0%,100%,.2) 20%,hsla(0,0%,100%,.6))
+            position: absolute
+            left: -40px
+            top: -150px
+            z-index: 2
+            transform: rotate(45deg)
+            transition: all .6s ease
+            animation-name: slideme
+            animation-duration: 3s
+            animation-delay: 0.05s
+            animation-timing-function: ease-in-out
+            animation-iteration-count: infinite
+        @keyframes slideme
+            0%
+                left: -30px
+                margin-left: 0px
+            30%
+                left: 110%
+                margin-left: 80px
+            100%
+                left: 110%
+                margin-left: 80px
+    &-img 
+        // position: absolute 
+        // top: 68.5%
+        // left: 71%
+        width: 29% 
+        margin-top: 31% 
+        &__block 
+            position: relative 
+            z-index: 0 
+            display: flex 
+            align-items: center 
+            & svg 
+                display: none 
+        &__logo 
+            display: flex 
+            justify-content: center 
+            flex-wrap: wrap 
+            +med 
+            font-size: 30px
+            text-transform: uppercase 
+            line-height: 22px 
+            color: $main-color 
+            & span 
+                font-size: 23px 
+                color: $second-color 
+                text-transform: none 
+        &__description 
+            padding: 8px 8px 8px 32px 
+            border: 1px dashed rgba(255, 255, 255, 0.5)
+            border-left: none 
+            border-radius: 3px 
+            +light 
+            font-size: 14px 
+            color: $white-color 
+            & span 
+                +med 
+        &__link 
+            position: absolute
+            top: 83px
+            left: 109px
+            letter-spacing: 1px
+            +med 
+            font-size: 12px 
+            text-transform: uppercase 
+            text-decoration: none
+            border-bottom: 1px dashed rgba(226, 248, 201, 0.5)
+            color: $link-color 
+            transition: all .3s
+            &:hover 
+                color: $white-color 
+                border-bottom: 1px dashed $white-color 
+                transition: all .3s
+    &-advantages 
+        margin-bottom: 20px 
+    &-list
+        display: flex
+        margin: 0
+        padding: 0
+        &__item 
+            position: relative 
+            z-index: 0 
+            display: flex 
+            margin: 0 13px 26px
+            padding: 9px 
+            border-radius: 10px 
+            background-color: $white-color 
+            max-width: 377px 
+            &:first-child 
+                margin-left: 0 
+                max-width: 434px 
+            &:last-child
+                margin-right: 0 
+                max-width: 298px 
+        &__image 
+            z-index: 1 
+            & img 
+                position: absolute 
+                bottom: 0
+                left: 0 
+        &__text
+            position: relative
+            border-radius: 10px
+            background: #fff
+            padding: 15px 13px 15px 91px 
+            &:before 
+                content: ""
+                position: absolute
+                top: -1px
+                bottom: -1px
+                left: -1px
+                right: -1px
+                background: linear-gradient(to right, #ffffff, rgba(140, 148, 162, 0.2))
+                border-radius: 10px
+                z-index: -1
+        &__title 
+            margin-bottom: 15px 
+            +med 
+            font-size: 20px 
+        &__description 
+            +reg 
+            font-size: 16px 
+@media (min-width: 1921px) 
+    .hero 
+        background: url(../img/hero/hero-bg-2560.jpg) no-repeat 
+        background-position: center
+        background-size: cover 
+        &-man 
+            position: absolute 
+            top: 0 
+            right: -33.8% 
+            width: 880px 
+            height: 590px 
+            background: url(../img/hero/man.png) no-repeat 
+@media (max-width: 1200px)
+    .hero 
+        background: url(../img/hero/hero-bg-1200.jpg) no-repeat 
+        background-position: center
+        background-size: cover
+        &-text 
+            width: 63.5% 
+            &__title
+                max-width: 450px
+                font-size: 34px
+            &__subtitle 
+                margin-bottom: 50px 
+                max-width: 380px
+                font-size: 20px
+        &-img 
+            // top: 72% 
+            // left: 63.6% 
+            width: 36.5% 
+            margin-top: 38.3% 
+        &__button 
+            &-block 
+                flex-direction: column 
+                align-items: flex-start 
+            &-price 
+                top: 40%
+                left: 4% 
+            &-offer 
+                margin-top: 30px 
+                margin-left: 150px 
+                &:after 
+                    content: ""
+                    position: absolute
+                    top: -132px
+                    left: -132px
+                    z-index: -1
+                    width: 420px
+                    height: 335px
+                    background: radial-gradient(#b9bdbf 15%, rgba(255, 255, 255, 0) 50%) 
+        &-list 
+            flex-wrap: wrap
+            justify-content: center 
+            &__item 
+                &:first-child
+                    margin-left: 13px 
+                &:last-child
+                    margin-right: 13px 
+@media (max-width: 1024px)
+    .hero 
+        background: url(../img/hero/hero-bg-1024.jpg) no-repeat 
+        background-position: center
+        background-size: cover
+        &-block 
+            flex-direction: column
+            align-items: center
+            text-align: center
+            padding-top: 40px 
+        &-text 
+            &__title 
+                margin: auto 
+                margin-bottom: 32px 
+            &__subtitle 
+                margin: auto
+                margin-bottom: 50px 
+        &__button 
+            &-block 
+                align-items: center 
+            &-price 
+                left: 17% 
+            &-offer 
+                margin-left: 120px 
+                font-size: 16px 
+        &-img 
+            margin-top: 0 
+            margin-bottom: 90px 
+            width: 50% 
+            text-align: left 
+            &__block 
+                & svg 
+                    display: block 
+                    position: absolute 
+                    z-index: -1 
+                    left: -78px 
+                &:after 
+                    content: ""
+                    position: absolute
+                    top: -100px
+                    left: -80px
+                    z-index: -2
+                    width: 600px
+                    height: 300px
+                    background: radial-gradient(#b9bdbf 15%, rgba(255, 255, 255, 0) 50%) 
+            &__link 
+                &:hover 
+                    color: $main-color 
+                    border-bottom: 1px dashed $main-color 
+@media (max-width: 768px)
+    .hero
+        &-text 
+            width: 100% 
+        &__button 
+            &-price 
+                left: 25% 
+        &-img 
+            width: 58% 
+@media (max-width: 642px) 
+    .hero 
+        &__button 
+            &-price 
+                left: 22% 
+        &-img 
+            width: 70% 
+@media (max-width: 550px)
+    .hero
+        &-text
+            &__title
+                max-width: 320px
+                font-size: 26px
+            &__subtitle
+                max-width: 340px
+                font-size: 18px
+@media (max-width: 532px) 
+    .hero 
+        &__button 
+            &-price 
+                left: 17% 
+        &-img 
+            width: 80% 
+@media (max-width: 510px) 
+    .hero 
+        &-list 
+            &__image 
+                & img 
+                    height: 100px 
+            &__text 
+                padding-left: 80px 
+            &__title 
+                font-size: 16px 
+            &__description 
+                font-size: 14px 
+@media (max-width: 466px) 
+    .hero 
+        &__button 
+            &-price 
+                left: 13% 
+        &-img 
+            width: 90% 
+@media (max-width: 425px) 
+    .hero 
+        &__button 
+            &-price 
+                left: 8% 
+        &-list 
+            &__item, &__item:first-child, &__item:last-child
+                margin: auto 
+                margin-bottom: 26px 
+                // &:first-child
+                //     margin-left: 0 
+                // &:last-child
+                //     margin-right: 0 
+        &-img 
+            width: 90% 
+@media (max-width: 414px) 
+    .hero 
+        &-img 
+            &__link 
+                top: 145% 
+                left: 17% 
+@media (max-width: 374px) 
+    .hero 
+        &__button 
+            &-price 
+                left: 6% 
+        &-list 
+            &__title 
+                font-size: 13px 
+            &__description 
+                font-size: 12px 
+@media (max-width: 362px) 
+    .hero 
+        &-img 
+            &__link 
+                top: 137% 
+                left: 13% 
+@media (max-width: 320px) 
+    .hero 
+        &__button 
+            &-price 
+                left: 0

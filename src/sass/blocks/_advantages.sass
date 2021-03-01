@@ -1,0 +1,233 @@
+.advantages 
+  position: relative 
+  height: 893px 
+  background: url(../img/advantages/advantages-bg.png) center center no-repeat 
+  background-position-y: 90px 
+  &-title 
+    font-size: 29px 
+    line-height: 1.45 
+    & span 
+      font-size: 44px 
+  &-block 
+    position: relative 
+  &__item 
+    position: absolute  
+    max-width: 290px 
+    &-img 
+      position: absolute 
+      left: -63px 
+      top: 11px 
+      display: flex 
+      align-items: center 
+      justify-content: center 
+      width: 37px 
+      height: 37px 
+      z-index: 0 
+      &:after 
+        content: "" 
+        position: absolute 
+        z-index: -2
+        width: 53px 
+        height: 53px 
+        border-radius: 50% 
+        background-color: $white-color 
+        box-shadow: 0px 0px 20px 0px rgba(49, 49, 65, 0.1) 
+      &:before 
+        content: "" 
+        position: absolute 
+        z-index: -1 
+        width: 37px 
+        height: 37px 
+        border-radius: 50% 
+        background-color: $white-color 
+        box-shadow: 0px 0px 20px 0px rgba(49, 49, 65, 0.1) 
+      & img 
+        width: 22px 
+        height: 22px 
+    &-text 
+      +reg 
+    &-title 
+      margin: 0 
+      margin-bottom: 16px 
+      font-size: 20px 
+    &-description 
+      margin: 0 
+      line-height: 1.45 
+    &-rtl 
+      direction: rtl 
+      & .advantages__item-img
+        position: absolute 
+        right: -63px 
+        top: 11px 
+    &-1 
+      top: 24px
+      left: 90px 
+    &-2 
+      top: 186px 
+      left: 47px 
+    &-3 
+      top: 325px 
+      left: 65px 
+    &-4 
+      top: 450px 
+      left: 20px 
+    &-5 
+      top: 17px
+      right: 40px
+      max-width: 325px 
+    &-6
+      top: 150px
+      right: 37px
+      max-width: 325px 
+    &-7
+      top: 304px
+      right: 0
+    &-8
+      top: 455px
+      right: -10px
+      max-width: 270px 
+  &-warranty 
+    position: relative 
+    top: 613px 
+    z-index: 0 
+    display: flex
+    align-items: center  
+    max-width: 755px 
+    margin: auto
+    padding: 9px
+    border-radius: 10px
+    background-color: $white-color 
+    box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+    &__img 
+      display: flex 
+      align-items: center 
+      justify-content: center 
+      width: 170px 
+      height: 150px 
+      z-index: 1
+    &__text 
+      position: relative 
+      border-radius: 10px
+      background: #fff
+      padding: 15px 22px 15px 15px 
+      &:before 
+        content: ""
+        position: absolute
+        top: -1px
+        bottom: -1px
+        left: -1px
+        right: -1px 
+        background: linear-gradient(to right, #ffffff, rgba(140, 148, 162, 0.2))
+        border-radius: 10px
+        z-index: -1 
+    &__title 
+      margin: 0 
+      margin-bottom: 22px 
+      +reg 
+      font-size: 30px 
+    &__description 
+      margin: 0 
+      margin-bottom: 5px
+      max-width: 450px 
+      +reg 
+      font-size: 22px 
+
+@media (max-width: 1200px)
+  .advantages 
+    &-title 
+      font-size: 24px 
+      & span 
+        font-size: 34px 
+    &__item 
+      max-width: 270px 
+      &-title 
+        margin-bottom: 10px 
+        font-size: 18px 
+      &-description 
+        font-size: 15px 
+      &-1 
+        top: 48px 
+        left: 0 
+      &-2
+        left: -30px 
+      &-3
+        top: 340px 
+        left: 10px 
+      &-4
+        top: 470px 
+        left: -30px 
+        max-width: 260px 
+      &-5
+        top: 40px 
+        right: -5px 
+      &-6
+        top: 165px 
+        right: 0 
+      &-7
+        top: 310px 
+        right: -55px 
+      &-8
+        top: 460px 
+        right: -30px 
+        max-width: 210px 
+@media (max-width: 1024px) 
+  .advantages 
+    background: none 
+    height: auto 
+    padding-bottom: 0 
+    &-block 
+      display: flex 
+      flex-wrap: wrap
+    &__item 
+      position: relative 
+      top: auto 
+      left: auto 
+      right: auto 
+      margin: auto 
+      margin-bottom: 60px 
+      max-width: 360px
+      display: flex 
+      &-rtl 
+        direction: ltr 
+        & .advantages__item-img 
+          position: relative
+          top: auto
+          left: auto
+          right: auto
+          margin-right: 40px
+          margin-left: 5% 
+      &-img
+        position: relative
+        top: auto
+        left: auto
+        right: auto
+        margin-right: 40px
+        margin-left: 5% 
+        width: 22px 
+        height: 22px 
+      &-text 
+        max-width: 260px
+    &-warranty 
+      top: auto 
+@media (max-width: 768px) 
+  .advantages 
+    &-warranty 
+      &__img 
+        height: 100px 
+        & img 
+          width: 100% 
+      &__title 
+        font-size: 20px 
+      &__description 
+        font-size: 18px 
+@media (max-width: 425px) 
+  .advantages 
+    &-title 
+      font-size: 20px 
+      & span 
+        font-size: 26px 
+    &-warranty 
+      &__text 
+        padding-left: 0 
+      &__description 
+        font-size: 16px 
