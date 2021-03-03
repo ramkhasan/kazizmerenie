@@ -15,10 +15,12 @@ main
   overflow: hidden
 .section
   padding: 50px 0 
-  &-title 
+  &__title 
     margin: auto
     padding-bottom: 63px 
+    font-family: 'MADE Evolve Sans Regular', sans-serif
     font-size: 42px
+    font-weight: normal
     text-align: center 
     line-height: 1.2 
     & span 
@@ -50,7 +52,7 @@ main
   transition: ease 0.3s
   outline: none
   z-index: 1
-  &:hover 
+  &:hover, &:focus  
     transform: scale(1.02)
   &:active 
     transform: scale(.98)
@@ -61,20 +63,18 @@ main
       text-transform: uppercase
  
 /* Стилизация полей формы */
-input
-  caret-color: $second-color
-  &:focus
-    border: 1px solid $second-color
-  &::placeholder
-    opacity: 0.5
 input 
   -webkit-appearance: none
 input.error
   border: 1px solid red
 #name-error, #phone-error, #email-error, #password-error, #last_name-error, #password_conf-error, #code-error
-  display: block
-  font-size: 12px
-  color: red
+  display: block 
+  margin: auto 
+  width: 250px 
+  font-size: 14px
+  color: red 
+  left: 50%
+  transform: translate(-50%, 0)
 
 /*  SCROLL TOP BUTTON */
 .scrollTop 
@@ -107,7 +107,7 @@ input.error
 
 @media (max-width: 1200px) 
   .section 
-    &-title 
+    &__title 
       font-size: 34px 
       padding-bottom: 40px
   .container
@@ -129,11 +129,11 @@ input.error
 @media (max-width: 425px)
   .button
     font-size: 14px
-    padding: 20px 70px 
+    padding: 20px 50px 
     & span:first-of-type
       font-size: 14px 
   .section
-    &-title
+    &__title
       font-size: 26px 
 @media (max-width: 374px) 
   .button 

@@ -3,12 +3,12 @@
   height: 893px 
   background: url(../img/advantages/advantages-bg.png) center center no-repeat 
   background-position-y: 90px 
-  &-title 
-    font-size: 29px 
+  &__title 
+    font-size: 30px 
     line-height: 1.45 
     & span 
       font-size: 44px 
-  &-block 
+  &__block 
     position: relative 
     margin-top: 4px 
   &__item 
@@ -87,7 +87,7 @@
       top: 455px
       right: -10px
       max-width: 270px 
-  &-warranty 
+  &__warranty 
     position: relative 
     top: 613px 
     z-index: 0 
@@ -99,14 +99,14 @@
     border-radius: 10px
     background-color: $white-color 
     box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
-    &__img 
+    &-img 
       display: flex 
       align-items: center 
       justify-content: center 
       width: 170px 
       height: 150px 
       z-index: 1
-    &__text 
+    &-text 
       position: relative 
       border-radius: 10px
       background: #fff
@@ -121,12 +121,12 @@
         background: linear-gradient(to right, #ffffff, rgba(140, 148, 162, 0.2))
         border-radius: 10px
         z-index: -1 
-    &__title 
+    &-title 
       margin: 0 
       margin-bottom: 22px 
       +reg 
       font-size: 30px 
-    &__description 
+    &-description 
       margin: 0 
       margin-bottom: 5px
       max-width: 450px 
@@ -136,7 +136,7 @@
 @media (max-width: 1200px)
   .advantages 
     background-position-y: 70px
-    &-title 
+    &__title 
       font-size: 24px 
       & span 
         font-size: 34px 
@@ -177,7 +177,7 @@
     background: none 
     height: auto 
     padding-bottom: 0 
-    &-block 
+    &__block 
       display: flex 
       flex-wrap: wrap 
       margin-top: 23px 
@@ -211,27 +211,27 @@
         height: 22px 
       &-text 
         max-width: 260px
-    &-warranty 
+    &__warranty 
       top: auto 
 @media (max-width: 768px) 
   .advantages 
-    &-warranty 
-      &__img 
+    &__warranty 
+      &-img 
         height: 100px 
         & img 
           width: 100% 
-      &__title 
+      &-title 
         font-size: 20px 
-      &__description 
+      &-description 
         font-size: 18px 
 @media (max-width: 425px) 
   .advantages 
-    &-title 
+    &__title 
       font-size: 20px 
       & span 
         font-size: 26px 
-    &-warranty 
-      &__text 
+    &__warranty 
+      &-text 
         padding-left: 0 
-      &__description 
+      &-description 
         font-size: 16px 

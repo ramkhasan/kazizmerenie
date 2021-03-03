@@ -3,10 +3,10 @@
     justify-content: space-between
     align-items: center
     padding: 13px 0
-    &-logo
+    &__logo
         display: flex
         align-items: center 
-    &-menu 
+    &__menu 
         margin-left: -25% 
     &__contacts 
         z-index: 1 
@@ -97,15 +97,12 @@ body.no-scroll
 
 @media (max-width: 1200px)
     .header
-        &-logo
-            &__image 
-                height: 36px
-                padding-right: 14px
-            &__img 
-                height: 36px
-            &__text 
-                font-size: 21px
-        &-menu 
+        &__logo 
+            margin-right: 14px 
+            & svg 
+                width: 36px 
+                height: 36px 
+        &__menu 
             margin-left: -30%
     .nav 
         &__item 

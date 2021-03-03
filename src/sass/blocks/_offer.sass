@@ -1,0 +1,244 @@
+.offer 
+  position: relative 
+  padding-top: 26px 
+  height: 1044px 
+  background: url(../img/offer/offer-bg.png) center center no-repeat 
+  background-size: cover 
+  background-position-y: -142px 
+  &__block 
+    display: flex 
+  &__text 
+    width: 50% 
+    &-list 
+      position: absolute 
+      top: 570px
+      padding: 34px 22px 16px  
+      max-width: 340px
+      border-radius: 10px 
+      background-color: $white-color 
+      box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1)
+      & p 
+        margin: 0 
+        margin-bottom: 18px
+        color: $second-color
+        +bold 
+        font-size: 18px 
+        text-transform: uppercase 
+        letter-spacing: 1px 
+      & ol 
+        padding: 0 
+        margin: 0 
+        list-style: none 
+        counter-reset: my-awesome-counter
+      & ol li 
+        margin-bottom: 5px
+        +reg 
+        font-size: 24px 
+        counter-increment: my-awesome-counter 
+        &:before 
+          content: counter(my-awesome-counter) ". "
+          color: $main-color  
+          +bold 
+  &__form 
+    padding: 43px 30px 35px
+    max-width: 660px 
+    width: 100% 
+    border-radius: 10px 
+    background-color: $white-color
+    box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+    text-align: center 
+    &-title 
+      padding-bottom: 35px 
+    &-subtitle 
+      display: block 
+      padding-bottom: 40px
+      +reg 
+      font-size: 22px 
+      line-height: 1.5 
+    &-block 
+      position: relative 
+      display: flex 
+      flex-direction: column 
+    &-input 
+      max-width: 400px 
+      width: 100% 
+      padding: 40px
+      margin: auto 
+      margin-bottom: 20px 
+      border: 1px solid $white-color  
+      border-radius: 100px 
+      caret-color: $main-color 
+      background-color: rgba(240, 242, 244, 0.4)
+      color: $text-color 
+      box-shadow: inset 0px 2px 7px 0px rgba(166, 171, 189, 0.4),inset 0px -2px 7px 0px rgba(250, 251, 255, 0.4)
+      text-align: center
+      +reg
+      font-size: 18px 
+      outline: none 
+      &:focus
+        border: 1px solid $main-color
+      &::placeholder 
+        color: $input-color 
+        +reg
+        font-size: 18px 
+      &.error:focus 
+        border: 1px solid red 
+    &-status 
+      display: flex 
+      align-items: flex-start  
+      justify-content: space-between 
+      margin: 34px 0 
+      &-label 
+        width: 90px 
+      &-img 
+        position: relative 
+        z-index: 0 
+        display: flex 
+        align-items: center 
+        justify-content: center 
+        margin-bottom: 36px 
+        cursor: pointer 
+        & img 
+          width: 36px 
+          height: 36px 
+        &:before
+          content: ""
+          position: absolute
+          z-index: -1
+          width: 55px
+          height: 55px 
+          border-radius: 50% 
+          background-color: $white-color 
+          box-shadow: 0px 0px 20px 0px rgba(49, 49, 65, 0.1) 
+        &:after 
+          content: ""
+          position: absolute
+          z-index: -2
+          width: 80px
+          height: 80px
+          border-radius: 50%
+          background-color: $white-color 
+          box-shadow: 0px 0px 20px 0px rgba(49, 49, 65, 0.1) 
+      &-text 
+        margin: auto 
+        max-width: 94px 
+        color: $second-color 
+        +med  
+        cursor: pointer 
+        transition: all 0.3s ease 
+    &-button 
+      max-width: 400px 
+      margin: auto 
+      margin-bottom: 40px 
+    &-description 
+      color: $second-color 
+      +light 
+      & a 
+        color: $second-color 
+        transition: all 0.3s ease
+        &:hover 
+          color: $main-color
+
+input[type="radio"] 
+  position: absolute
+
+input[type="radio"] + label 
+  &>span.offer__form-status-img img 
+    filter: opacity(50%) 
+    transition: all 0.3s ease 
+  &>span.offer__form-status-img:before 
+    border: 1px solid $white-color 
+    transition: all 0.3s ease 
+  &:hover 
+    &>span.offer__form-status-img img 
+      filter: none 
+    &>span.offer__form-status-text 
+      color: $text-color 
+
+input[type="radio"]:checked + label,
+input[type="radio"]:focus + label 
+  &>span.offer__form-status-img img 
+    filter: none 
+  &>span.offer__form-status-img:before 
+    border: 1px solid $main-color 
+  &>span.offer__form-status-text 
+    color: $text-color 
+
+#email-error 
+  position: absolute 
+  top: 84px
+#phone-error 
+  position: absolute 
+  top: 206px
+
+@media (max-width: 1200px)
+  .offer 
+    height: auto 
+    &__block 
+      flex-direction: column-reverse 
+      margin: auto 
+    &__text 
+      width: 100% 
+      &-list 
+        position: relative
+        top: auto
+        margin: auto 
+        max-width: 660px 
+    &__form 
+      margin: auto 
+      margin-bottom: 60px 
+      &-title 
+        padding-bottom: 26px 
+      &-subtitle 
+        font-size: 18px
+
+@media (max-width: 768px) 
+  .offer 
+    background: none 
+    &__form 
+      padding: 35px 18px 35px 
+      &-subtitle 
+        max-width: 500px 
+        margin: auto
+      &-status 
+        flex-wrap: wrap 
+        justify-content: center 
+        &-label 
+          margin: 24px 
+      &-description 
+        font-size: 14px 
+
+@media (max-width: 440px) 
+  .offer 
+    &__form 
+      &-button 
+        padding: 20px 46px 
+
+@media (max-width: 425px) 
+  .offer 
+    &__text 
+      &-list 
+        & p 
+          font-size: 16px 
+        & ol li 
+          font-size: 20px 
+    &__form 
+      &-subtitle 
+        font-size: 16px 
+      &-input 
+        padding: 30px
+  #email-error 
+    position: absolute 
+    top: 64px
+  #phone-error 
+    position: absolute 
+    top: 166px
+
+@media (max-width: 359px) 
+  .offer 
+    &__form 
+      &-status 
+        &-label 
+          margin: 18px 
+      &-button 
+        padding: 20px 28px 

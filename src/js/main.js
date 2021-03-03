@@ -51,3 +51,30 @@ $(document).ready(function () {
       });
   });
 })();
+
+// Валидация формы
+$(document).ready(function () {
+  $("#offer-form").validate({
+    rules: {
+      email: {
+        required: true,
+      },
+      phone: {
+        required: true,
+      },
+    },
+    messages: {
+      email: {
+        required: "Введите ваш E-mail",
+        email: "Ваш E-mail должен быть в формате name@domain.com"
+      },
+      phone: {
+        required: "Введите номер телефона",
+      },
+    },
+  });
+  // Маска для телефона
+  $(".phone").mask("+7 (999) 999-99-99");
+});
+// Очистка полей ввода формы после отправки
+$("#offer-form")[0].reset(); 
