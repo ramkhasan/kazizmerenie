@@ -78,3 +78,41 @@ $(document).ready(function () {
 });
 // Очистка полей ввода формы после отправки
 $("#offer-form")[0].reset(); 
+
+// Выбор товара по цвету 
+const $button = $('.shop__accordion-content__text-colors__minBl');
+$button.on('click', function () {
+  const n=$button.index(this);
+    $(".shop__accordion-content__image-bl").removeClass("active");
+    $(".shop__accordion-content__image-bl").eq(n).addClass("active");
+});
+const $button2 = $('.shop__accordion-content__text-colors__minBl-2');
+$button2.on('click', function () {
+  const n=$button2.index(this);
+    $(".shop__accordion-content__image-bl-2").removeClass("active");
+    $(".shop__accordion-content__image-bl-2").eq(n).addClass("active");
+});
+const $button3 = $('.shop__accordion-content__text-colors__minBl-3');
+$button3.on('click', function () {
+  const n=$button3.index(this);
+    $(".shop__accordion-content__image-bl-3").removeClass("active");
+    $(".shop__accordion-content__image-bl-3").eq(n).addClass("active");
+});
+const $button4 = $('.shop__accordion-content__text-colors__minBl-4');
+$button4.on('click', function () {
+  const n=$button4.index(this);
+    $(".shop__accordion-content__image-bl-4").removeClass("active");
+    $(".shop__accordion-content__image-bl-4").eq(n).addClass("active");
+});
+const $button5 = $('.shop__accordion-content__text-colors__minBl-5');
+$button5.on('click', function () {
+  const n=$button5.index(this);
+    $(".shop__accordion-content__image-bl-5").removeClass("active");
+    $(".shop__accordion-content__image-bl-5").eq(n).addClass("active");
+});
+const $button6 = $('.shop__accordion-content__text-colors__minBl-6');
+$button6.on('click', function () {
+  const n=$button6.index(this);
+    $(".shop__accordion-content__image-bl-6").removeClass("active");
+    $(".shop__accordion-content__image-bl-6").eq(n).addClass("active");
+});

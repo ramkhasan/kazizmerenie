@@ -1,0 +1,313 @@
+.shop 
+  padding-top: 13px
+  &__accordion 
+    display: flex 
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 100% 
+    height: auto
+    &-radio 
+      display: none 
+    &-label 
+      display: flex 
+      align-items: center 
+      justify-content: center
+      width: 175px 
+      height: 71px 
+      padding: 15px 
+      margin-bottom: 25px 
+      border-radius: 10px 
+      background-color: $white-color 
+      box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+      +reg 
+      font-size: 18px
+      text-align: center
+      cursor: pointer
+    &-content 
+      order: 1
+      flex-grow: 1
+      width: 100%
+      height: 100%
+      display: none 
+      border-radius: 10px 
+      background-color: $white-color 
+      box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+      &__image 
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 480px
+        height: auto  
+        border-radius: 10px 0 0 10px
+        & img 
+          // max-width: 100%
+          // max-height: 100%
+          border-radius: 10px 0 0 10px
+          object-fit: cover 
+        & .shop__accordion-content__image-bl,
+        & .shop__accordion-content__image-bl-2,
+        & .shop__accordion-content__image-bl-3,
+        & .shop__accordion-content__image-bl-4,
+        & .shop__accordion-content__image-bl-5,
+        & .shop__accordion-content__image-bl-6
+          opacity: 0 
+          visibility: hidden
+          max-width: 0
+          max-height: 0 
+          &.active 
+            opacity: 1
+            visibility: visible
+            max-width: 100%
+            max-height: 500px
+      &__text 
+        display: flex 
+        justify-content: space-between
+        flex-wrap: wrap 
+        width: 680px 
+        height: auto
+        padding: 32px 18px 50px 47px
+        border-radius: 0 10px 10px 0
+        background-color: $white-color 
+        box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+        &-title 
+          width: 224px
+          margin: 0 
+          padding-top: 6px
+          +med 
+          font-size: 24px 
+          font-weight: normal
+        &-label 
+          padding: 14px 10px 
+          height: 40px
+          border-radius: 10px
+          color: $second-color
+          background-color: $white-color
+          box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+          +reg 
+          font-size: 12px 
+          text-align: center 
+          letter-spacing: 1px
+          text-transform: uppercase 
+          cursor: pointer
+        &-content 
+          order: 1
+          flex-grow: 1
+          width: 100% 
+          min-height: 256px
+          height: auto 
+          display: none 
+          // max-height: 0
+          // opacity: 0 
+          // visibility: hidden 
+          // transition: all 0.3s
+          &__title  
+            margin: 39px 0 5px
+            color: $second-color 
+            +bold 
+            font-size: 14px 
+            text-transform: uppercase 
+            letter-spacing: 1px
+        &-body 
+          margin: 0 
+          margin-bottom: 45px 
+          max-width: 600px
+          +reg
+          line-height: 1.9
+          &__image 
+            display: flex 
+            align-items: center 
+            flex-wrap: wrap
+            width: 100% 
+            margin-bottom: 25px 
+            &-link 
+              margin: 0 10px 20px
+              width: 120px
+              height: 120px
+              & img 
+                width: 100%
+                height: 100%
+                object-fit: cover 
+        &-price 
+          order: 2 
+          width: 200px
+          &__title 
+            margin: 0 0 10px 
+          &__tag 
+            margin-bottom: 28px
+            +med 
+            font-size: 24px 
+          &__button 
+            padding: 15px 60px 
+            font-size: 18px 
+            text-transform: uppercase 
+        &-info 
+          order: 3 
+          width: 386px
+        &-colors 
+          display: flex 
+          flex-direction: column 
+          margin-bottom: 50px 
+          &__title 
+            margin: 0 0 6px
+          &__panel 
+            display: flex 
+          & .shop__accordion-content__text-colors__minBl,
+          & .shop__accordion-content__text-colors__minBl-2,
+          & .shop__accordion-content__text-colors__minBl-3,
+          & .shop__accordion-content__text-colors__minBl-4,
+          & .shop__accordion-content__text-colors__minBl-5,
+          & .shop__accordion-content__text-colors__minBl-6
+            display: flex 
+            width: 27px
+            height: 27px
+            margin-right: 15px
+            border-radius: 50%
+            cursor: pointer 
+            &:last-child
+              margin-right: 0 
+            &:nth-child(1) 
+              background-color: $product-black-color
+            &:nth-child(2) 
+              background-color: $product-brown-color
+            &:nth-child(3) 
+              background-color: $product-dark-grey-color
+            &:nth-child(4) 
+              background-color: $product-grey-color
+            &:nth-child(5) 
+              background-color: $product-green-color
+            &:nth-child(6) 
+              background-color: $product-light-brown-color
+        &-links 
+          display: flex
+        &-link 
+          width: 190px 
+          margin: 0 
+          transition: all 0.3s ease
+          &:hover 
+            color: $main-color 
+    & input[type="radio"] 
+	    display: none
+    & input[type="radio"] + label 
+      color: $second-color
+      z-index: 1
+    & input[type="radio"]:checked + label.shop__accordion-label
+      background-color: $main-color
+      color: $white-color 
+      +bold 
+    & input[type="radio"]:checked + label + .shop__accordion-content 
+      display: flex
+    & input[type="radio"]:checked + label.shop__accordion-content__text-label
+      color: $main-color 
+      +bold 
+    & input[type="radio"]:checked + label + .shop__accordion-content__text-content
+      display: flex
+      flex-direction: column 
+      // max-height: 500px
+      // opacity: 1 
+      // visibility: visible
+      // transition: all 0.3s
+
+@media (max-width: 1200px) 
+  .shop 
+    &__accordion 
+      &-label 
+        width: 140px 
+      &-content 
+        &__text 
+          padding: 39px 24px 47px 
+          &-title 
+            width: 200px
+            font-size: 21px 
+          &-label 
+            height: 38px 
+            font-size: 10px 
+          &-info 
+            width: 300px 
+          &-link 
+            font-size: 12px 
+@media (max-width: 1024px)
+  .shop 
+    &__accordion 
+      &-tab--status 
+        display: inline
+      &-label, &-content
+        order: initial
+      &-label 
+        width: 100%
+        margin-bottom: 0
+        display: flex
+        justify-content: space-between
+      &-content 
+        flex-direction: column
+        &__image
+          width: 100% 
+          height: 300px
+          border-radius: 10px 10px 0 0
+          & img 
+            padding: 0
+            margin: 0
+            width: 100%
+            height: 300px 
+            border-radius: 10px 10px 0 0
+        &__text 
+          width: 100% 
+          border-radius: 0 0 10px 10px
+          &-title 
+            width: 300px
+          &-body 
+            max-width: 100%
+          &-price 
+            width: 35% 
+          &-info 
+            width: 65%
+      & input[type="radio"] + label span:after  
+        content: '+'
+      & input[type="radio"]:checked + label span:after  
+        content: '—'
+@media (max-width: 768px)
+  .shop 
+    &__accordion 
+      &-content 
+        &__text 
+          &-title 
+            width: auto 
+          &-price
+            width: 40%
+          &-info 
+            width: 60%
+@media (max-width: 650px)
+  .shop 
+    &__accordion 
+      &-content 
+        &__text 
+          flex-direction: column 
+          flex-wrap: nowrap
+          &-title 
+            margin: auto
+            margin-bottom: 30px
+            text-align: center 
+          &-label 
+            max-width: 290px
+            width: 100%
+            margin: auto 
+            margin-bottom: 16px 
+          &-price 
+            margin-bottom: 50px 
+            width: 100% 
+          &-info 
+            width: 100% 
+@media (max-width: 425px)
+  .shop 
+    &__accordion 
+      &-content 
+        &__text 
+          &-body 
+            margin-bottom: 30px
+          &-colors 
+            margin-bottom: 40px
+          &-links 
+            flex-direction: column 
+          &-link 
+            margin-bottom: 20px 
+            &:last-child
+              margin-bottom: 0
