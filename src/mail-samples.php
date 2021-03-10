@@ -4,9 +4,7 @@ require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$status = $_POST['status'];
+$phone = $_POST['samples_phone'];
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -28,12 +26,18 @@ $mail->addAddress('ramhas87@gmail.com');     // Кому будет уходит
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заявка с сайта kazizmerenie.ru';
-$mail->Body    = '<b>Новый клиент оставил заявку на расчёт стоимости продукции.</b><br>
-Его электорнная почта: <i>'.$email.'</i>.<br>
-Его телефон: <i>'.$phone.'</i>.<br>
-Его статус: <i>'.$status.'</i>.';
-$mail->AltBody = '';
+// $mail->Subject = 'Заявка с сайта kazizmerenie.ru';
+// $mail->Body    = '<b>Новый клиент запросил бесплатные образцы продукции.</b><br>
+// Его телефон - <i>'.$phone.'</i>.';
+// $mail->AltBody = '';
+
+// Отсылаем письмо с файлом на почту клиента
+$mail->Subject = 'Бесплатные образцы продукции / Заявка с сайта kazizmerenie.ru';
+$mail->Body    = 'Доброго времени суток.<br>
+Высылаем Вам бесплатные образцы нашей продукции.<br>
+Ваш телефон : <i>' .$phone.'</i>.';
+
+$mail->addAttachment('files/list.pdf');
 
 if(!$mail->send()) {
   echo 'Error';

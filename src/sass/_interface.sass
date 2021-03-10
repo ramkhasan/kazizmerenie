@@ -5,7 +5,7 @@ body
   color: $text-color
   height: 100%
   background: $white-color
-  font-family: 'MADE Evolve Sans Thin', sans-serif
+  font-family: 'MADE Evolve Sans Regular', sans-serif
   font-size: 16px
   line-height: 1.25
 h1, h2, h3, h4, p 
@@ -34,6 +34,9 @@ main
     letter-spacing: 1px
     & span 
       font-family: 'MADE Evolve Sans Bold', sans-serif 
+  &__subtitle 
+    font-family: 'MADE Evolve Sans Regular', sans-serif
+    font-size: 30px
 .container
   position: relative
   width: 1160px
@@ -73,17 +76,49 @@ main
  
 /* Стилизация полей формы */
 input 
-  -webkit-appearance: none
+  -webkit-appearance: none 
 input.error
   border: 1px solid red
-#name-error, #phone-error, #email-error, #password-error, #last_name-error, #password_conf-error, #code-error
+#name-error, #phone-error, #samples_phone-error, #email-error, #password-error, #last_name-error, #password_conf-error, #code-error
   display: block 
   margin: auto 
   width: 250px 
   font-size: 14px
   color: red 
   left: 50%
-  transform: translate(-50%, 0)
+  transform: translate(-50%, 0) 
+
+form input 
+  max-width: 400px 
+  width: 100% 
+  padding: 40px
+  margin: auto 
+  margin-bottom: 20px 
+  border: 1px solid $white-color  
+  border-radius: 100px 
+  caret-color: $main-color 
+  color: $text-color 
+  background-color: rgba(240, 242, 244, 0.4) 
+  box-shadow: inset 0px 2px 7px 0px rgba(166, 171, 189, 0.4), inset 0px -2px 7px 0px rgba(250, 251, 255, 0.4)
+  text-align: center 
+  font-size: 18px 
+  outline: none 
+  &:focus
+    border: 1px solid $main-color
+  &::placeholder 
+    color: $input-color 
+    font-size: 18px 
+  &.error:focus 
+    border: 1px solid red 
+
+.form__privacy 
+  color: $second-color 
+  font-family: 'MADE Evolve Sans Light', sans-serif
+  & a 
+    color: $second-color 
+    transition: all 0.3s ease
+    &:hover 
+      color: $main-color
 
 /*  SCROLL TOP BUTTON */
 .scrollTop 
@@ -118,7 +153,9 @@ input.error
   .section 
     &__title 
       font-size: 34px 
-      padding-bottom: 40px
+      padding-bottom: 40px 
+    &__subtitle 
+      font-size: 26px 
   .container
     max-width: 960px
     width: 95% 
@@ -144,6 +181,10 @@ input.error
   .section
     &__title
       font-size: 26px 
+    &__subtitle 
+      font-size: 22px 
+  form input 
+    padding: 30px !important
 @media (max-width: 374px) 
   .button 
     padding: 20px 46px

@@ -52,7 +52,7 @@ $(document).ready(function () {
   });
 })();
 
-// Валидация формы
+// Валидация формы offer-form
 $(document).ready(function () {
   $("#offer-form").validate({
     rules: {
@@ -76,8 +76,24 @@ $(document).ready(function () {
   // Маска для телефона
   $(".phone").mask("+7 (999) 999-99-99");
 });
-// Очистка полей ввода формы после отправки
-$("#offer-form")[0].reset(); 
+
+// Валидация формы samples-form
+$(document).ready(function () {
+  $("#samples-form").validate({
+    rules: {
+      samples_phone: {
+        required: true,
+      },
+    },
+    messages: {
+      samples_phone: {
+        required: "Введите номер телефона",
+      },
+    },
+  });
+  // Маска для телефона
+  $(".phone").mask("+7 (999) 999-99-99");
+});
 
 // Выбор товара по цвету 
 const $button = $('.shop__accordion-content__text-colors__minBl');
