@@ -2,17 +2,11 @@
   position: relative 
   padding-top: 58px 
   height: 732px 
-  background: url(../img/samples/samples-bg.png) center center no-repeat
-  background-size: cover 
+  background: url(../img/samples/samples-bg.png) center center no-repeat 
   &__block 
     display: flex 
     align-items: flex-start 
     justify-content: space-between 
-  // &__img 
-  //   width: 880px
-  //   height: 900px
-  //   background: url(../img/samples/samples-manager.png) center center no-repeat
-  //   background-size: cover 
   &__img 
     min-width: 470px
     &-name 
@@ -51,7 +45,6 @@
       padding: 0
       margin-bottom: 34px 
     &-subtitle 
-      display: block 
       margin-bottom: 46px 
     &-description 
       max-width: 560px 
@@ -91,6 +84,10 @@
       right: 30px 
       z-index: 1
 
+@media screen and ( min-width: 1921px )
+  .samples 
+    background: url(../img/samples/samples-bg-2560.png) center center no-repeat 
+    background-size: cover 
 @media screen and ( max-width: 1200px )
   .samples 
     height: 860px 
@@ -125,10 +122,13 @@
         margin: auto
 @media screen and ( max-width: 1024px )
   .samples 
+    padding: 50px 0 
     height: auto 
     background: none 
     &__block 
       flex-direction: column-reverse 
+    &__img 
+      display: none 
     &__form 
       max-width: 600px 
       text-align: center 

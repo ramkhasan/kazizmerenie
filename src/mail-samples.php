@@ -33,11 +33,8 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 // Отсылаем письмо с файлом на почту клиента
 $mail->Subject = 'Бесплатные образцы продукции / Заявка с сайта kazizmerenie.ru';
-$mail->Body    = 'Доброго времени суток.<br>
-Высылаем Вам бесплатные образцы нашей продукции.<br>
-Ваш телефон : <i>' .$phone.'</i>.';
-
-$mail->addAttachment('files/list.pdf');
+$mail->Body    = '<b>Новый клиент скачал бесплатные образцы продукции.</b><br>
+Его телефон: <i>'.$phone.'</i>.';
 
 if(!$mail->send()) {
   echo 'Error';

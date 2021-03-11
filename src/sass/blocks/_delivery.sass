@@ -1,0 +1,123 @@
+.delivery 
+  padding-top: 85px 
+  height: 1559px 
+  background: url(../img/delivery/delivery-bg-1920.png) center center no-repeat 
+  // background-position-y: -19px 
+  &__block 
+    display: flex 
+    align-items: flex-start  
+    justify-content: space-between 
+  &__text 
+    max-width: 810px 
+  &__title 
+    padding-bottom: 32px 
+    text-align: left 
+  &__subtitle 
+    margin-bottom: 33px 
+    max-width: 680px 
+  &__description 
+    margin-bottom: 48px 
+    max-width: 430px 
+    font-size: 24px 
+    line-height: 1.4 
+  &__button 
+    margin-bottom: 36px 
+    &-offer 
+      display: flex 
+      align-items: flex-start  
+      &__img 
+        margin-left: -40px
+        width: 176px 
+        height: 110px 
+        & img 
+          width: 100% 
+          height: 100% 
+          background-size: cover 
+      &__text
+        max-width: 230px 
+        margin-left: -11px 
+        color: $table-title-color 
+        font-size: 18px 
+        line-height: 1.4 
+  &__points 
+    display: flex 
+    flex-direction: column 
+    margin: 10px 
+    padding: 25px 30px 
+    border-radius: 10px
+    background-color: $white-color 
+    box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+    text-align: center 
+    &-title 
+      max-width: 149px 
+      margin: auto 
+      margin-bottom: 13px
+      color: $second-color 
+      +bold
+      font-size: 18px 
+      text-transform: uppercase 
+      letter-spacing: 1px 
+    &-address 
+      font-size: 18px 
+      line-height: 1.8
+
+@media screen and ( min-width: 1921px )
+  .delivery 
+    background: url(../img/delivery/delivery-bg-2560.png) center center no-repeat 
+    background-size: cover 
+@media screen and ( max-width: 1200px )
+  .delivery 
+    padding-top: 35px 
+    &__subtitle 
+      max-width: 590px 
+    &__description 
+      font-size: 20px 
+@media screen and ( max-width: 1024px )
+  .delivery 
+    padding: 50px 0 
+    height: auto 
+    background: none 
+    &__block 
+      flex-direction: column 
+      align-items: center 
+      max-width: 700px 
+      margin: auto 
+      text-align: center 
+    &__title 
+      text-align: center 
+    &__description 
+      margin: auto 
+      margin-bottom: 48px 
+    &__button 
+      margin: auto 
+      margin-bottom: 36px 
+      &-offer 
+        margin: auto 
+        max-width: 360px 
+    &__points 
+      &-title 
+        max-width: 250px 
+@media screen and ( max-width: 540px )
+  br 
+    display: none 
+@media screen and ( max-width: 425px )
+  .delivery 
+    &__description 
+      font-size: 18px
+    &__button 
+      &-offer 
+        &__img 
+          margin-left: -30px
+        &__text 
+          max-width: 198px 
+          margin-left: -20px 
+          font-size: 16px
+@media screen and ( max-width: 359px )
+  .delivery 
+    &__button 
+      &-offer 
+        &__img 
+          display: none 
+        &__text 
+          margin: auto 
+          margin-bottom: 40px

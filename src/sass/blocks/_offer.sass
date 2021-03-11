@@ -1,10 +1,8 @@
 .offer 
   position: relative 
-  padding-top: 26px 
-  height: 1044px 
-  background: url(../img/offer/offer-bg.png) center center no-repeat 
-  background-size: cover 
-  background-position-y: -142px 
+  padding: 26px 0 63px 
+  background: url(../img/offer/offer-bg-1920.png) center center no-repeat 
+  background-position-y: 0 
   &__block 
     display: flex 
   &__text 
@@ -143,9 +141,13 @@ input[type="radio"]:focus + label
   &>span.offer__form-status-text 
     color: $text-color 
 
+@media screen and ( min-width: 1921px )
+  .offer 
+    background: url(../img/offer/offer-bg-2560.png) center center no-repeat 
+    background-size: cover 
+    background-position-y: -42px 
 @media (max-width: 1200px)
   .offer 
-    height: auto 
     &__block 
       flex-direction: column-reverse 
       margin: auto 
@@ -163,10 +165,12 @@ input[type="radio"]:focus + label
         padding-bottom: 26px 
       &-subtitle 
         font-size: 18px
-
+@media screen and ( max-width: 1024px )
+  .offer 
+    padding: 50px 0 
+    background: none 
 @media (max-width: 768px) 
   .offer 
-    background: none 
     &__form 
       padding: 35px 18px 35px 
       &-subtitle 
