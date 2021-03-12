@@ -1,0 +1,239 @@
+.packaging 
+  &__block 
+    margin-top: 60px
+    display: flex 
+    width: 100% 
+  &__img 
+    position: relative 
+    width: 500px 
+    & img 
+      position: absolute 
+      top: -36px
+      left: -380px 
+    & svg 
+      position: absolute 
+      top: -83px 
+      left: -95px 
+      z-index: -2 
+    &-volume 
+      position: absolute 
+      top: 346px 
+      left: 35px
+      z-index: 1 
+      text-align: center 
+      line-height: 0.8 
+      &__number
+        position: relative 
+        font-size: 117px  
+        +bold 
+        text-align: center 
+        background: linear-gradient(rgba(139, 178, 95, 1), rgba(66, 100, 40, 1))
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent 
+        &:after 
+          text-shadow: 0 2px 0 #3e5920
+          background: none
+          content: attr(data-text)
+          left: 27px 
+          position: absolute 
+          top: 0
+          z-index: -1 
+        &-bl,
+        &-bl-2,
+        &-bl-3,
+        &-bl-4,
+        &-bl-5,
+        &-bl-6 
+          display: none 
+          &.active 
+            display: block 
+      & span 
+        position: relative 
+        width: 43px
+        font-size: 43px  
+        +bold 
+        text-align: center 
+        background: linear-gradient(rgba(139, 178, 95, 1), rgba(66, 100, 40, 1))
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent 
+        &:after 
+          text-shadow: 0 2px 0 #3e5920
+          background: none
+          content: attr(data-text)
+          left: 0
+          position: absolute 
+          top: 7px 
+          z-index: -1 
+      &__description 
+        margin: auto 
+        margin-top: 20px 
+        max-width: 142px 
+        line-height: 1.2
+      & img 
+        position: absolute 
+        top: 71px 
+        left: 129px
+  &__text 
+    &-block 
+      position: relative 
+      padding: 44px 50px 105px 
+      z-index: 1 
+      width: 660px 
+      background-color: $white-color 
+      border-radius: 10px 
+      box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+  &__title 
+    padding-bottom: 35px 
+    &-bl,
+    &-bl-2,
+    &-bl-3,
+    &-bl-4,
+    &-bl-5,
+    &-bl-6
+      display: none 
+      &.active 
+        display: block 
+  &__subtitle 
+    max-width: 400px 
+    margin: auto 
+    margin-bottom: 36px 
+  &__list 
+    display: flex 
+    flex-direction: column 
+    &-item 
+      margin-bottom: 16px 
+      display: flex 
+      align-items: center 
+      font-size: 18px 
+      & img 
+        margin-right: 14px 
+        width: 27px 
+        height: 27px 
+  &__slider 
+    position: relative 
+    top: 0
+    z-index: 1
+    margin: auto 
+    margin-top: -70px 
+    padding: 20px 30px 10px 
+    max-width: 560px 
+    border-radius: 10px
+    background-color: $white-color 
+    box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+    &-title 
+      color: $table-title-color 
+      text-align: center 
+      margin-bottom: 6px 
+    & .swiper-slide 
+      padding-left: 38px
+      display: flex 
+      align-items: center 
+      height: 86px 
+      cursor: pointer 
+    & .swiper-button-prev.swiper-button-prev, .swiper-button-next.swiper-button-next 
+      top: 65% 
+      width: 32px
+      height: 32px
+      background-color: $white-color 
+      border-radius: 50% 
+      box-shadow: 0px 0px 20px 0px rgba(49, 49, 65, 0.1)
+      opacity: 1 
+      outline: none
+    & .swiper-button-prev.swiper-button-prev 
+      left: -17px 
+      padding-right: 2px
+    & .swiper-button-next.swiper-button-next 
+      right: -17px 
+      padding-left: 2px
+    & .swiper-button-next, .swiper-button-prev
+      color: $main-color 
+      &:after 
+        font-size: 14px 
+        font-weight: 600
+    & .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled
+      color: $input-color 
+  &__slide 
+    &-img 
+      width: 66px 
+      height: 66px 
+      display: flex 
+      align-items: center 
+      justify-content: center 
+      border: 1px solid $white-color
+      border-radius: 50% 
+      background-color: $white-color 
+      box-shadow: 0px 0px 20px 0px rgba(49, 49, 65, 0.1) 
+      transition: all 0.3s ease 
+      & img 
+        border-radius: 50% 
+      &.active 
+        border: 1px solid $main-color 
+        transition: all 0.3s ease 
+    &-text 
+      margin-left: 20px 
+      width: 126px
+
+@media screen and ( max-width: 1024px )
+  .packaging 
+    padding-bottom: 0 
+    &__block 
+      margin-top: 50px
+      flex-direction: column-reverse 
+    &__text 
+      &-block 
+        margin: auto 
+        max-width: 660px 
+        width: 100% 
+    &__slider 
+      width: 90% 
+    &__img 
+      top: -200px
+      margin: auto 
+      margin-bottom: -250px
+      max-width: 440px 
+      & img 
+        position: relative 
+        left: -260px 
+      &-volume 
+        & img 
+          position: absolute 
+          top: 71px 
+          left: 129px
+@media screen and ( max-width: 775px )
+  .packaging 
+    &__slide 
+      &-text 
+        width: 114px
+        font-size: 14px 
+    &__slider .swiper-slide 
+      padding-left: 20px 
+@media screen and ( max-width: 768px )
+  .packaging 
+    &__list 
+      &-item 
+        margin: auto 
+        margin-bottom: 16px
+        max-width: 400px 
+        font-size: 16px 
+@media screen and ( max-width: 639px )
+  .packaging
+    &__slider .swiper-slide 
+      padding-left: 20% 
+@media screen and ( max-width: 480px )
+  .packaging
+    &__slider .swiper-slide 
+      padding-left: 15% 
+@media screen and ( max-width: 375px )
+  .packaging
+    &__slider .swiper-slide 
+      padding-left: 10% 
+@media screen and ( max-width: 360px )
+  .packaging 
+    &__slide 
+      &-img 
+        width: 57px 
+        height: 57px 
+@media screen and ( max-width: 340px )
+  .packaging
+    &__slider .swiper-slide 
+      padding-left: 5% 
