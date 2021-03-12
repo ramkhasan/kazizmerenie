@@ -122,19 +122,24 @@
         &-link 
             position: absolute
             top: 83px
-            left: 109px
-            letter-spacing: 1px
+            left: 109px 
+            display: flex
+            align-items: center
+            border-bottom: 1px dashed rgba(226, 248, 201, 0.5)
+            color: $link-color 
             +med 
             font-size: 12px 
             text-transform: uppercase 
             text-decoration: none
-            border-bottom: 1px dashed rgba(226, 248, 201, 0.5)
-            color: $link-color 
+            letter-spacing: 1px
             transition: all .3s
             &:hover 
                 color: $white-color 
                 border-bottom: 1px dashed $white-color 
-                transition: all .3s
+                transition: all .3s 
+            & svg 
+                display: flex 
+                margin-left: 5px
     &__advantages 
         margin-bottom: 20px 
     &__list
@@ -289,6 +294,11 @@
                 &:hover 
                     color: $main-color 
                     border-bottom: 1px dashed $main-color 
+                & svg 
+                    position: relative 
+                    top: 0 
+                    left: 0 
+                    height: 16px 
 @media (max-width: 768px)
     .hero
         &__text 

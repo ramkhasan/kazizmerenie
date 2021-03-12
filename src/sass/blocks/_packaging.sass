@@ -12,32 +12,24 @@
       left: -380px 
     & svg 
       position: absolute 
-      top: -83px 
-      left: -95px 
+      top: -110px 
+      left: -90px 
       z-index: -2 
     &-volume 
       position: absolute 
-      top: 346px 
-      left: 35px
+      top: 373px 
+      left: 30px
       z-index: 1 
       text-align: center 
       line-height: 0.8 
       &__number
         position: relative 
-        font-size: 117px  
+        font-size: 78px  
         +bold 
         text-align: center 
         background: linear-gradient(rgba(139, 178, 95, 1), rgba(66, 100, 40, 1))
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent 
-        &:after 
-          text-shadow: 0 2px 0 #3e5920
-          background: none
-          content: attr(data-text)
-          left: 27px 
-          position: absolute 
-          top: 0
-          z-index: -1 
         &-bl,
         &-bl-2,
         &-bl-3,
@@ -56,23 +48,15 @@
         background: linear-gradient(rgba(139, 178, 95, 1), rgba(66, 100, 40, 1))
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent 
-        &:after 
-          text-shadow: 0 2px 0 #3e5920
-          background: none
-          content: attr(data-text)
-          left: 0
-          position: absolute 
-          top: 7px 
-          z-index: -1 
       &__description 
         margin: auto 
-        margin-top: 20px 
+        margin-top: 10px 
         max-width: 142px 
         line-height: 1.2
       & img 
         position: absolute 
-        top: 71px 
-        left: 129px
+        top: 44px 
+        left: 134px
   &__text 
     &-block 
       position: relative 
@@ -84,15 +68,6 @@
       box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
   &__title 
     padding-bottom: 35px 
-    &-bl,
-    &-bl-2,
-    &-bl-3,
-    &-bl-4,
-    &-bl-5,
-    &-bl-6
-      display: none 
-      &.active 
-        display: block 
   &__subtitle 
     max-width: 400px 
     margin: auto 
@@ -171,7 +146,9 @@
         transition: all 0.3s ease 
     &-text 
       margin-left: 20px 
-      width: 126px
+      width: 126px 
+      &.active 
+        +med
 
 @media screen and ( max-width: 1024px )
   .packaging 

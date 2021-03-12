@@ -1,0 +1,133 @@
+.warehouse 
+  padding-top: 78px
+  height: 1126px 
+  background: url(../img/warehouse/warehouse-bg.png) center center no-repeat 
+  background-position-y: 25px
+  &__title 
+    padding-bottom: 42px
+    max-width: 725px 
+  &__subtitle 
+    margin-bottom: 66px 
+    max-width: 542px 
+  &__block 
+    &-description 
+      position: relative 
+      margin: auto 
+      max-width: 360px 
+      & p 
+        position: absolute 
+        top: 0 
+        left: 0 
+        right: 0 
+        bottom: 0 
+        margin: auto
+        max-width: 166px 
+        max-height: 150px 
+        font-size: 18px 
+        text-align: center 
+        line-height: 1.67
+        & span 
+          +med
+    & img 
+      position: absolute 
+      bottom: -118px 
+      right: -93px 
+      z-index: 1
+      width: 663px 
+      height: auto 
+    &-agreement 
+      position: relative 
+      padding: 24px 67px 40px 
+      margin: auto 
+      max-width: 754px 
+      border-radius: 10px 
+      background-color: $white-color 
+      box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1)
+      text-align: left 
+      &__title 
+        max-width: 450px 
+        margin-left: 0 
+        margin-bottom: 20px 
+        +med 
+        text-align: left 
+      &__button 
+        padding: 37px 60px 
+        margin-right: 28px 
+        text-transform: uppercase 
+        letter-spacing: 2px
+        &-block 
+          display: flex 
+          align-items: center 
+        &-offer 
+          max-width: 170px 
+          color: $table-title-color 
+
+@media screen and ( max-width: 1200px )
+  .warehouse 
+    height: auto
+    background-position-y: 0 
+    &__block 
+      & img 
+        right: -165px 
+@media screen and ( max-width: 1024px )
+  .warehouse 
+    &__block 
+      &-agreement 
+        padding: 24px 35px 30px 
+        &__title 
+          max-width: 400px
+      & img 
+        right: -18%  
+        bottom: -6% 
+        width: 500px 
+@media screen and ( max-width: 845px )
+  .warehouse 
+    &__block 
+      & img 
+        display: none 
+        // position: relative 
+        // right: 0 
+        // left: 0 
+        // margin: auto 
+        // display: flex 
+        // top: -20px
+      &-agreement 
+        max-width: 500px 
+        &__title 
+          text-align: center 
+          margin: auto 
+          margin-bottom: 20px
+        &__button 
+          padding: 30px 20px
+          margin-right: 20px
+          font-size: 14px
+          &-block 
+            margin: auto 
+            max-width: 400px
+          &-offer 
+            max-width: 165px
+            font-size: 14px
+@media screen and ( max-width: 510px )
+  .warehouse 
+    &__block 
+      &-agreement 
+        &__button 
+          margin-right: 0
+          margin-bottom: 30px 
+          max-width: 350px 
+          width: 100% 
+          &-block 
+            flex-direction: column 
+            text-align: center 
+@media screen and ( max-width: 425px )
+  .warehouse 
+    &__block 
+      &-description 
+        & p 
+          max-height: 120px 
+          font-size: 16px 
+          line-height: 1.5
+        & svg 
+          margin: auto
+          display: flex
+          width: 288px 

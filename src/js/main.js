@@ -147,8 +147,8 @@ $button7.on('click', function () {
   const n=$button7.index(this);
     $(".packaging__img-volume__number-bl").removeClass("active");
     $(".packaging__img-volume__number-bl").eq(n).addClass("active");
-    $(".packaging__title-bl").removeClass("active");
-    $(".packaging__title-bl").eq(n).addClass("active");
     $(".packaging__slide-img").removeClass("active");
     $(".packaging__slide-img").eq(n).addClass("active");
+    $(".packaging__slide-text").removeClass("active");
+    $(".packaging__slide-text").eq(n).addClass("active");
 });
