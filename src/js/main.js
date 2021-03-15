@@ -85,6 +85,31 @@ $(document).ready(function () {
   $(".phone").mask("+7 (999) 999-99-99");
 });
 
+// Валидация формы offer-form-2
+$(document).ready(function () {
+  $("#offer-form-2").validate({
+    rules: {
+      user_email: {
+        required: true,
+      },
+      user_phone: {
+        required: true,
+      },
+    },
+    messages: {
+      user_email: {
+        required: "Введите ваш E-mail",
+        email: "Ваш E-mail должен быть в формате name@domain.com"
+      },
+      user_phone: {
+        required: "Введите номер телефона",
+      },
+    },
+  });
+  // Маска для телефона
+  $(".phone").mask("+7 (999) 999-99-99");
+});
+
 // Валидация формы samples-form
 $(document).ready(function () {
   $("#samples-form").validate({

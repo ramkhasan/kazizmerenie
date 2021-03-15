@@ -1,0 +1,96 @@
+.offer-2 
+  position: relative 
+  padding-top: 126px
+  background: url(../img/conditions/conditions-bg.png) center center no-repeat 
+  background-position-y: 27px  
+  & .offer 
+    &__block 
+      margin-bottom: 40px
+    &__text
+      &-list 
+        top: 466px 
+        padding: 34px 24px 27px
+        max-width: 365px 
+        & p 
+          margin-left: 125px 
+        & span 
+          display: block 
+          padding-top: 14px 
+          font-size: 24px 
+        &__header 
+          display: flex 
+          & img 
+            position: absolute
+            top: -40px 
+            left: 7px 
+            width: 126px 
+    &__form 
+      &-subtitle 
+        max-width: 500px 
+        margin: auto 
+      &-input
+        &.phone
+          margin-bottom: 44px 
+      &-block 
+        & #user_email-error 
+          position: absolute 
+          top: 84px 
+        & #user_phone-error 
+          position: absolute 
+          top: 206px
+      &-button 
+        padding: 25px 41px
+        max-width: 493px
+
+@media screen and ( max-width: 1200px )
+  .offer-2 
+    background-size: cover 
+    background-position-x: 42%
+    & .offer 
+      &__text 
+        &-list 
+          top: 0 
+          & span 
+            font-size: 22px 
+@media screen and ( max-width: 1024px )
+  .offer-2 
+    background: none 
+@media screen and ( max-width: 540px )
+  .offer-2 
+    & .offer__form-button 
+      padding: 25px 34px
+      & span:first-of-type 
+        font-size: 14px 
+@media screen and ( max-width: 425px )
+  .offer-2 
+    & .offer
+      &__form 
+        &-block 
+          & #user_email-error 
+            top: 60px 
+          & #user_phone-error 
+            top: 161px
+        &-button 
+          padding: 25px 20px
+          & span:first-of-type 
+            font-size: 12px 
+      &__text
+        &-list
+          & p 
+            max-width: 180px 
+          & span 
+            font-size: 20px 
+@media screen and ( max-width: 375px )
+  .offer-2 
+    & .offer__text-list 
+      padding: 34px 15px 27px 
+@media screen and ( max-width: 359px )
+  .offer-2 
+    & .offer__text-list 
+      & p 
+        font-size: 14px
+@media screen and ( max-width: 337px )
+  .offer-2 
+    & .offer__text-list 
+      & p 
+        font-size: 12px
