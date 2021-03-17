@@ -123,9 +123,25 @@ form input
     color: $second-color 
     transition: all 0.3s ease
     &:hover 
-      color: $main-color
+      color: $main-color 
 
-/*  SCROLL TOP BUTTON */
+.swiper-button-prev, .swiper-button-next
+  width: 32px !important
+  height: 32px !important
+  background-color: $white-color 
+  border-radius: 50% 
+  box-shadow: 0px 0px 20px 0px rgba(49, 49, 65, 0.1)
+  opacity: 1 !important
+  outline: none 
+.swiper-button-next, .swiper-button-prev
+  color: $main-color !important
+  &:after 
+    font-size: 14px !important
+    font-weight: 600
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled
+  color: $input-color !important 
+
+// SCROLL TOP BUTTON
 .scrollTop 
   display: flex
   pointer-events: none
@@ -152,7 +168,7 @@ form input
     transform: translateY(-1px)
   &:hover
     opacity: 1
-/*  END SCROLL TOP BUTTON */
+// END SCROLL TOP BUTTON
 
 @media (max-width: 1200px) 
   .section 

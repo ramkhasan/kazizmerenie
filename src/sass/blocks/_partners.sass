@@ -1,0 +1,42 @@
+.partners 
+  padding-top: 33px 
+  padding-bottom: 0 
+  &__logos 
+    display: flex 
+    align-items: center 
+    justify-content: space-between 
+    margin-bottom: 40px 
+  &__slider 
+    position: relative 
+  & .swiper-container.swiper-container
+    max-width: 1121px 
+    padding: 30px 23px 
+  & .swiper-slide.swiper-slide 
+    height: 213px 
+    border-radius: 5px
+    box-shadow: 0px 0px 30px 0px rgba(49, 49, 65, 0.1) 
+    cursor: pointer
+    & img 
+      width: 100%
+      height: 100%
+      object-fit: contain
+  & .swiper-button-prev, .swiper-container-rtl .swiper-button-next 
+    left: -20px 
+  & .swiper-button-next, .swiper-container-rtl .swiper-button-prev 
+    right: -20px
+
+@media screen and ( max-width: 1200px )
+  .partners 
+    padding-top: 50px 
+    &__logos 
+      flex-wrap: wrap 
+      justify-content: space-around
+      &-img 
+        margin: 30px 
+@media screen and ( max-width: 425px )
+  .partners 
+    &__logos 
+      &-img 
+        margin: 20px 
+        & img 
+          width: 100% 

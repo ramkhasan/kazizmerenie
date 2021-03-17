@@ -1,0 +1,248 @@
+.contacts 
+  padding-top: 47px 
+  background: url(../img/contacts/contacts-bg.png) no-repeat center center 
+  &__title 
+    padding-bottom: 50px
+  &__accordion 
+    display: flex 
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 100% 
+    height: auto
+    &-radio 
+      display: none 
+    &-label 
+      display: flex 
+      align-items: center 
+      justify-content: center
+      width: 261px 
+      height: 62px 
+      padding: 15px 
+      margin-bottom: 36px 
+      border-radius: 10px 
+      border: 1px solid $white-color 
+      background-color: $white-color 
+      box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+      +bold
+      font-size: 18px
+      text-align: center 
+      text-transform: uppercase 
+      cursor: pointer 
+      transition: all 0.3s ease 
+    &-content 
+      order: 1
+      flex-grow: 1
+      width: 100%
+      height: 100%
+      display: none 
+      border-radius: 10px 
+      background-color: $white-color 
+      box-shadow: 0px 0px 60px 0px rgba(49, 49, 65, 0.1) 
+      &__text 
+        width: 440px 
+        padding: 38px 43px  
+        &-title 
+          margin-bottom: 42px
+          +med 
+          font-size: 30px 
+        &-address 
+          margin-bottom: 37px 
+          &__title 
+            margin-bottom: 3px
+            color: $second-color 
+            +bold 
+            font-size: 14px 
+            text-transform: uppercase 
+            letter-spacing: 1px 
+          &__subtitle 
+            font-size: 18px 
+        &-phone 
+          margin-bottom: 37px 
+          &__title 
+            margin-bottom: 3px
+            color: $second-color 
+            +bold 
+            font-size: 14px 
+            text-transform: uppercase 
+            letter-spacing: 1px 
+          &__subtitle 
+            font-size: 18px 
+            color: $text-color 
+            text-decoration: none 
+            transition: all 0.3s ease 
+            &:hover 
+              color: $main-color 
+        &-email 
+          margin-bottom: 50px 
+          &__title 
+            margin-bottom: 3px
+            color: $second-color 
+            +bold 
+            font-size: 14px 
+            text-transform: uppercase 
+            letter-spacing: 1px 
+          &__subtitle 
+            font-size: 18px 
+            color: $text-color 
+            text-decoration: none 
+            transition: all 0.3s ease 
+            &:hover 
+              color: $main-color 
+        &-requisites 
+          margin-bottom: 50px 
+          & span 
+            color: $second-color 
+            +bold 
+            font-size: 14px 
+            text-transform: uppercase 
+            letter-spacing: 1px 
+        &-button 
+          padding: 36px 40px 
+          margin: auto
+          max-width: 440px 
+          width: 100%
+          +bold 
+          font-size: 18px 
+          text-transform: uppercase  
+      &-office 
+        & .contacts__accordion-content 
+          &__text 
+            &-title, &-address, &-phone, &-email
+              margin-bottom: 20px 
+
+    & input[type="radio"] 
+	    display: none 
+    & input[type="radio"] + label 
+      color: $input-color 
+      letter-spacing: 1px 
+      z-index: 1
+    & input[type="radio"]:checked + label.contacts__accordion-label
+      border: 1px solid $main-color
+      color: $text-color 
+    & input[type="radio"]:checked + label + .contacts__accordion-content 
+      display: flex 
+    & input[type="radio"]:checked + label + .contacts__accordion-content__text-content
+      display: flex
+      flex-direction: column 
+
+.ymap-container 
+  position: relative
+  width: 720px 
+  height: auto
+  overflow: hidden
+  cursor: pointer
+  background: url('../img/contacts/office.jpg') no-repeat center center 
+  background-size: cover 
+
+// Блок, в котором появится Яндекс.Карта
+#map-yandex
+  position: relative
+  z-index: 7
+  width: 100%
+  height: 100%
+  cursor: pointer
+  background-color: transparent
+
+// Индикатор загрузки, который показывается до загрузки карты
+.loader 
+  position: absolute
+  z-index: 15
+  top: -100%
+  left: 0 
+  width: 100%
+  height: 100%
+  overflow: hidden 
+  transition: opacity 0.7s ease
+  opacity: 0
+  background-color: rgba(0,0,0,.55) 
+  &.is-active 
+    top: 0
+    opacity: 1
+  &-default:after 
+    position: absolute
+    top: calc(50% - 24px)
+    left: calc(50% - 24px)
+    width: 48px
+    height: 48px
+    content: ''
+    animation: rotation 1s linear infinite
+    border: solid 8px $white-color 
+    border-left-color: transparent
+    border-radius: 50%
+  @keyframes rotation 
+    from 
+      transform: rotate(0)
+    to 
+      transform: rotate(359deg)
+  @keyframes blink 
+    from 
+      opacity: 0.5
+    to 
+      opacity: 1 
+
+.map
+  position: relative 
+  width: 720px 
+  height: auto  
+
+@media screen and ( max-width: 1200px )
+  .contacts 
+    &__accordion 
+      &-label 
+        width: 200px 
+        font-size: 16px 
+      &-content 
+        &__text 
+          &-title 
+            font-size: 28px 
+          &-button 
+            padding: 36px 10px 
+            font-size: 16px 
+          &-address, &-phone, &-email, &-requisites
+            &__subtitle
+              font-size: 16px 
+@media (max-width: 1024px)
+  .contacts 
+    padding: 50px 0 
+    background: none 
+    &__accordion 
+      &-tab--status 
+        display: inline
+      &-label, &-content
+        order: initial
+      &-label 
+        width: 100%
+        margin-bottom: 0
+        display: flex
+        justify-content: space-between 
+      &-content 
+        flex-direction: column
+        &__text 
+          width: 100% 
+      & input[type="radio"] + label span:after  
+        content: '+'
+      & input[type="radio"]:checked + label span:after  
+        content: '—' 
+  .ymap-container, .map
+    width: 100% 
+    height: 300px 
+@media screen and ( max-width: 425px )
+  .contacts 
+    &__accordion 
+      &-content 
+        &__text 
+          padding: 30px 30px 36px
+          &-title 
+            font-size: 24px
+          &-requisites
+            margin-bottom: 30px 
+          &-button 
+            font-size: 14px 
+@media screen and ( max-width: 330px )
+  .contacts 
+    &__accordion 
+      &-content 
+        &__text 
+          &-button 
+            font-size: 12px 
+    

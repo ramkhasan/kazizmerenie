@@ -1,0 +1,71 @@
+.footer 
+  padding: 20px 0 
+  &__block 
+    display: flex 
+    align-items: center 
+    justify-content: space-between 
+    & .contacts
+      &__whatsapp-btn:hover
+        border: 1px solid $main-color 
+        color: $main-color 
+      &__phone-tel 
+        color: $text-color 
+        transition: all 0.3s ease 
+        &:hover 
+          color: $main-color 
+  &__logo 
+    width: 41px
+    height: 41px
+  &__menu 
+    margin-left: -42px 
+  &-nav 
+    &__list 
+      display: flex 
+      flex-wrap: wrap 
+      justify-content: center
+    &__item 
+      padding: 15px 
+    &__link 
+      position: relative
+      +med
+      font-size: 15px
+      text-transform: uppercase
+      text-decoration: none
+      color: $second-color
+      transition: all 0.6s
+      &:before 
+        content: ""
+        width: 0
+        height: 1px
+        position: absolute
+        bottom: -1px
+        right: 0
+        background: $second-color
+        transition: all 0.3s
+      &:hover 
+        &:before 
+          width: 100%
+          left: 0
+          background: $second-color
+
+@media screen and ( max-width: 1200px )
+  .footer 
+    &__block 
+      flex-wrap: wrap
+      justify-content: space-around 
+    &__menu 
+      margin-left: 0 
+    &__contacts 
+      margin: 20px 
+@media screen and ( max-width: 1024px )
+  .footer 
+    background-color: $table-color 
+    &__block 
+      & .contacts__phone-tel 
+        display: block 
+      & .contacts__whatsapp 
+        margin: 20px 
+@media screen and ( max-width: 768px )
+  .footer 
+    &__logo 
+      margin: 20px 
